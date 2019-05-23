@@ -28,6 +28,10 @@ type ProductController struct {
 	beego.Controller
 }
 
+type EditorController struct {
+	beego.Controller
+}
+
 func (c *IndexController) Get() {
 	c.TplName = "index.html"
 }
@@ -50,4 +54,8 @@ func (c *NewsDeyailController) Get() {
 
 func (c *ProductController) Get() {
 	c.TplName = "product.html"
+}
+
+func (e *EditorController) Get() {
+	e.TplName = "editor.html"
 }
